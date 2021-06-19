@@ -59,6 +59,34 @@ public class BinarySearchTree {
 		return flag;
 	}
 	
+	public void delete(int value) {
+		Node currentNode = this.head;
+		//check if head need to delete
+		if (value == this.head.value) {
+			System.out.println("To be implemented.... in future....");
+			return;
+		}
+		Node parent = null;
+		while (currentNode != null) {
+		 	if (value > currentNode.value) {
+		 		parent = currentNode;
+				currentNode = currentNode.right;
+			} if (value == currentNode.value) {
+		 		if (currentNode.left == null && currentNode.right == null && parent != null) {
+		 			if (parent.left != null && parent.left.value == currentNode.value) {
+		 				parent.left = null;
+		 			} else {
+		 				parent.right = null;
+		 			}
+		 			break;
+		 		}
+		 	} else {
+		 		parent = currentNode;
+				currentNode = currentNode.left;
+			}
+		}
+	}
+	
 	
 	public static void main(String[] args) {
 		BinarySearchTree binarySearchTree = new BinarySearchTree(100);
