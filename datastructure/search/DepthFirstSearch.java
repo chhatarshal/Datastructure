@@ -10,7 +10,7 @@ public class DepthFirstSearch {
 	
 	public static List<Integer> preOrderTraversal(BinarySearchTree bst) {
 		List<Integer> output = new ArrayList<>();
-		System.out.println("to do...");
+		System.out.println("Processing preorder traversal of a binary search tree ...");
 		BinarySearchTree.Node headNode = bst.getHead();
 		BinarySearchTree.Node currentNode = headNode;
 		Stack<BinarySearchTree.Node> stack = new Stack<>();
