@@ -8,16 +8,26 @@ public class OnlySingleObjectInsertionInSet {
 	
 	public static void main(String[] args) {
 		Set<Student> studentSet = new HashSet<>();
-		Student s1 = new Student();
-		Student s2 = new Student();
+		Student s1 = new Student("11");
+		Student s2 = new Student("232");
+		Student s3 = new Student("323");
 		studentSet.add(s1);
 		studentSet.add(s2);
+		studentSet.add(s3);
 		System.out.println(studentSet.size());
 	}
 
 }
 
 class Student {
+	
+	Student() {
+		
+	}
+	
+Student(String id) {
+		this.id = id;
+	}
 	
 	public int hashCode() {
 		return 0;
@@ -26,8 +36,6 @@ class Student {
 	public boolean equals(Object obj) {
          return true;
     }
-	
-	Object ob;
 	
 	public String id;
 
