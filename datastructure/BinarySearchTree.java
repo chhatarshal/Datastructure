@@ -2,7 +2,7 @@ package com.csingh.datastructure;
 
 public class BinarySearchTree {
 	
-	class Node {		
+	public class Node {		
 		Node() {
 		}
 		
@@ -10,12 +10,16 @@ public class BinarySearchTree {
 			value = value1;
 		}
 		 
-		private Integer value;
-		private Node left;
-		private Node right;
+		 public Integer value;
+		 public Node left;
+		 public Node right;
 	}
 	
 	Node head;	
+	
+	public Node getHead() {
+		return this.head;
+	}
 	public BinarySearchTree(Integer rootNodeValue) {
 		head = new Node(rootNodeValue);
 	}
